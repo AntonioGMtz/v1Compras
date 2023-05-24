@@ -19,14 +19,14 @@ class SesionController extends Controller
             ]);
     
         }
-        return redirect()->to('/');
+        return redirect()->to('/dashboard');
     }
 
     public function destroy() {
 
         auth()->logout();
 
-        return redirect()->to('/');
+        return redirect()->to('/home');
     }
 }
 

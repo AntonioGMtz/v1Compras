@@ -20,9 +20,9 @@ rounded-lg shadow-lg">
     text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Password"
     id="password" name="password">
 
-    @error('message')
-    <p class="border border-red-500 rounded-md bg-red-100 w-full
-      text-red-600 p-2 my-2">* Error</p>
+    @error('message')        
+      <p class="border border-red-500 rounded-md bg-red-100 w-full
+      text-red-600 p-2 my-2">* {{ $message }}</p>
     @enderror
     
     <button type="submit" class="rounded-md bg-red-500 w-full text-lg
