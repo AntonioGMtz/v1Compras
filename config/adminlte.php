@@ -326,8 +326,10 @@ return [
         ],
         [
             'text' => 'Proovedores',
+            'url'  => 'resources/profile/proovedores',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-store',
+            'id'   => 'elemento1',
         ],
           // Espaciado y elementos adicionales:
 
