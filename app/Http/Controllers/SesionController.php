@@ -19,7 +19,7 @@ class SesionController extends Controller
             ]);
     
         }
-        return redirect()->to('/dashboard');
+        return redirect()->to('/');
     }
 
     public function destroy() {

@@ -8,7 +8,7 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('home');
-})->name('home');
+})->middleware('auth');
 
 
 Route::get('/register', [RegisterController::class,'create'])->name('register.index');
@@ -23,5 +23,10 @@ Route::post('/login', [SesionController::class, 'store'])
 
 //Route for dashboard
 Route::get('/dashboard', [DashboardController::class,'create'])->name('dashboard.index');
+
+
+Route::get('/logout', [SesionController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('login.destroy');
 
 
