@@ -64,9 +64,9 @@
 
  
 <div class="btn-container">
-    <button class="btn2 btn-success" onclick="agregar()">
+    <button class="btn2 btn-success " onclick="agregar()">
       <i class="fas fa-plus"></i>
-      <span class="btn-text">Agregar</span>
+      <span class="btn-text">Nuevo</span>
     </button>
 
     <button class="btn2 btn-primary" onclick="exportar()">
@@ -97,6 +97,63 @@
       Buscar <i class="fas fa-search"></i>
     </button>
   </div>
+  <div class="container mt-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Número</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">RFC</th>
+          <th scope="col">Sucursal</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Proveedor 1</td>
+          <td>RFC-123</td>
+          <td>Sucursal A</td>
+          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
+          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Proveedor 2</td>
+          <td>RFC-456</td>
+          <td>Sucursal B</td>
+          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
+          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Proveedor 3</td>
+          <td>RFC-789</td>
+          <td>Sucursal C</td>
+          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
+          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Proveedor 4</td>
+          <td>RFC-012</td>
+          <td>Sucursal D</td>
+          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
+          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Proveedor 5</td>
+          <td>RFC-345</td>
+          <td>Sucursal E</td>
+          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
+          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
     function agregar() {
