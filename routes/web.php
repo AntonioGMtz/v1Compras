@@ -8,7 +8,7 @@ use App\Http\Controllers\ProovedorController;
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('auth.login');
 })->middleware('auth');
 
 
@@ -31,6 +31,9 @@ Route::get('/proovedores', [ProovedorController::class,'create'])->name('prooved
 
 Route::get('/logout', [SesionController::class, 'destroy'])
     ->middleware('auth')
+    ->name('login.destroy');
+
+Route::post('/logout', [SesionController::class, 'destroy'])
     ->name('login.destroy');
 
 
