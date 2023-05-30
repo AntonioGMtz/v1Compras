@@ -28,7 +28,7 @@
     </li>
     <li>
       <a href="{{ route('login.destroy') }}" class="font-bold
-      py-3 px-4 rounded-md bg-red-500 hover:bg-red-600">Log out</a>
+      py-3 px-4 rounded-md bg-red-500 hover:bg-red-600">Cerrar Sesion</a>
     </li>
   @else
     <li class="mx-6">

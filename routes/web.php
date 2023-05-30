@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SesionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProovedorController;
+use App\Http\Controllers\AgproovedorController;
 
 
 Route::get('/', function () {
@@ -28,6 +29,8 @@ Route::get('/dashboard', [DashboardController::class,'create'])->name('dashboard
 //Route for dashboard
 Route::get('/proovedores', [ProovedorController::class,'create'])->name('proovedores.index');
 
+//Route for add proovedor
+Route::get('/agregarproov', [AgproovedorController::class,'create'])->name('agregarproov.index');
 
 Route::get('/logout', [SesionController::class, 'destroy'])
     ->middleware('auth')

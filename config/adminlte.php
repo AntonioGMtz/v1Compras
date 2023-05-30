@@ -311,7 +311,7 @@ return [
        
         [
             'text' => 'Usuarios',
-            'url'  => 'admin/settings',
+            'url'  => 'dashboard',
             'icon' => 'fas fa-fw fa-users',
         ],
         [
@@ -326,8 +326,7 @@ return [
         ],
         [
             'text' => 'Proovedores',
-            'url'  => 'resources/profile/proovedores',
-            'url'  => 'admin/settings',
+            'url'  => 'proovedores',
             'icon' => 'fas fa-fw fa-store',
             'id'   => 'elemento1',
         ],

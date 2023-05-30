@@ -64,9 +64,9 @@
 
  
 <div class="btn-container">
-    <button class="btn2 btn-success " onclick="agregar()">
+    <button class="btn2 btn-success co" onclick="agregar()">
       <i class="fas fa-plus"></i>
-      <span class="btn-text">Nuevo</span>
+      <span class="btn-text" onclick="window.location.href='/agregarproov'">Nuevo</span>
     </button>
 
     <button class="btn2 btn-primary" onclick="exportar()">
