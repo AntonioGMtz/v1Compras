@@ -37,7 +37,7 @@
   }
 
   /* Estilos para el botón de suma */
-  button[type="submit"] {
+  button[type="button"] {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -50,7 +50,7 @@
     width: 30px;
   }
 
-  button[type="submit"]:hover {
+  button[type="button"]:hover {
     background-color: #45a049;
   }
   .campo-container > div {
@@ -70,9 +70,7 @@
 
   
 </style>
-
-<form>
-  <label for="numero">Número:</label>
+<label for="numero">Número:</label>
   <input type="number" id="numero" name="numero">
 
   <label for="categoria">Categoría:</label>
@@ -83,81 +81,73 @@
     <!-- Agrega más opciones aquí -->
   </select>
 
-  <button type="submit">
+  <button type="button">
     <span style="font-size: 1rem;">+</span>
   </button>
+
+<form  method="POST" action="{{ route('agregarproov.store') }}">
+@csrf
+ 
 
   <br>
   <table>
   <tr>
-    <td><label for="razon_social">Razón Social:</label></td>
-    <td><input type="text" id="razon_social" name="razon_social"></td>
+    <td><label for="razonsocial">Razón Social:</label></td>
+    <td><input type="text" id="razonsocial" name="razonsocial"></td>
     <td><label for="email">Email:</label></td>
     <td><input type="email" id="email" name="email"></td>
-    <td><label for="nombre_comercial">Nombre Comercial:</label></td>
-    <td><input type="text" id="nombre_comercial" name="nombre_comercial"></td>
+    <td><label for="nombrecomercial">Nombre Comercial:</label></td>
+    <td><input type="text" id="nombrecomercial" name="nombrecomercial"></td>
   </tr>
   <tr>
 
     <td><label for="telefono1">Teléfono 1:</label></td>
-    <td><input type="text" id="telefono1" name="telefono1"></td>
-    <td><label for="telefono2">Teléfono 2:</label></td>
-    <td><input type="text" id="telefono2" name="telefono2"></td>
+    <td><input type="text" id="teluno" name="teluno"></td>
+    <td><label for="teldos">Teléfono 2:</label></td>
+    <td><input type="text" id="teldos" name="teldos"></td>
     <td><label for="rfc">RFC:</label></td>
     <td><input type="text" id="rfc" name="rfc"></td>
   </tr>
 
   <tr>
-    <td><label for="rfc">Cuenta CLABE:</label></td>
-    <td><input type="text" id="rfc" name="rfc"></td>
-    <td><label for="telefono2">Sucursal:</label></td>
-    <td><input type="text" id="telefono2" name="telefono2"></td>
-    <td><label for="rfc">Pais:</label></td>
-    <td><input type="text" id="rfc" name="rfc"></td>
+    <td><label for="clabe">Cuenta CLABE:</label></td>
+    <td><input type="text" id="clabe" name="clabe"></td>
+    <td><label for="sucursal">Sucursal:</label></td>
+    <td><input type="text" id="sucursal" name="sucursal"></td>
+    <td><label for="pais">Pais:</label></td>
+    <td><input type="text" id="pais" name="pais"></td>
   </tr>
   <tr>
  
-    <td><label for="telefono2">Estado:</label></td>
-    <td><input type="text" id="telefono2" name="telefono2"></td>
-    <td><label for="rfc">Municipio:</label></td>
-    <td><input type="text" id="rfc" name="rfc"></td>
-    <td><label for="telefono2">Localidad:</label></td>
-    <td><input type="text" id="telefono2" name="telefono2"></td>
+    <td><label for="estado">Estado:</label></td>
+    <td><input type="text" id="estado" name="estado"></td>
+    <td><label for="municipio">Municipio:</label></td>
+    <td><input type="text" id="municipio" name="municipio"></td>
+    <td><label for="localidad">Localidad:</label></td>
+    <td><input type="text" id="localidad" name="localidad"></td>
   </tr>
 
   <tr>
-    <td><label for="rfc">Calle:</label></td>
-    <td><input type="text" id="rfc" name="rfc"></td>
-    <td><label for="telefono2">Colonia:</label></td>
-    <td><input type="text" id="telefono2" name="telefono2"></td>
-    <td><label for="rfc">Codigo postal:</label></td>
-    <td><input type="text" id="rfc" name="rfc"></td>
+    <td><label for="calle">Calle:</label></td>
+    <td><input type="text" id="calle" name="calle"></td>
+    <td><label for="colonia">Colonia:</label></td>
+    <td><input type="text" id="colonia" name="colonia"></td>
+    <td><label for="cp">Codigo postal:</label></td>
+    <td><input type="text" id="cp" name="cp"></td>
   </tr>
   <tr>
   
-    <td><label for="telefono2">Numero interior:</label></td>
-    <td><input type="text" id="telefono2" name="telefono2"></td>
-    <td>
-        <!-- Botón de guardar -->
-<button type="button" class="btn btn-primary">
-  <i class="bi bi-check"></i> Guardar
-</button>
-</td>
-<td>
-<!-- Botón de cancelar -->
-<button type="button" class="btn btn-secondary">
-  <i class="bi bi-x"></i> Cancelar
-</button>
-</td>
+    <td><label for="numint">Numero interior:</label></td>
+    <td><input type="text" id="numint" name="numint"></td>
 
-
-    
   </tr>
-</table>
-
-
-  
+    </table>
+   <!-- Botón de guardar -->
+   <button type="submit" class="btn btn-primary">
+    Guardar
+    </button>
 </form>
+      
 @stop
 
 @section('css')
@@ -167,7 +157,7 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>

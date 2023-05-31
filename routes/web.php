@@ -18,7 +18,7 @@ Route::get('/register', [RegisterController::class,'create'])->name('register.in
 Route::post('/register', [RegisterController::class,'store'])->name('register.store');
 
 
-//Routes fo login
+//Routes for LOGIN
 Route::get('/login', [SesionController::class,'create'])->name('login.index');
 Route::post('/login', [SesionController::class, 'store'])
     ->name('login.store');
@@ -29,8 +29,15 @@ Route::get('/dashboard', [DashboardController::class,'create'])->name('dashboard
 //Route for dashboard
 Route::get('/proovedores', [ProovedorController::class,'create'])->name('proovedores.index');
 
-//Route for add proovedor
+//Route for ADD proovedor
 Route::get('/agregarproov', [AgproovedorController::class,'create'])->name('agregarproov.index');
+
+Route::post('/agregarproov',[AgproovedorController::class,'store'])->name('agregarproov.store');
+
+
+//Route for PROOVEDORES
+Route::get('/proovedores', [ProovedorController::class, 'index'])->name('proovedores.index');
+
 
 Route::get('/logout', [SesionController::class, 'destroy'])
     ->middleware('auth')

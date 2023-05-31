@@ -110,46 +110,16 @@
         </tr>
       </thead>
       <tbody>
+      @foreach ($proveedores as $proveedor)
         <tr>
-          <td>1</td>
-          <td>Proveedor 1</td>
-          <td>RFC-123</td>
-          <td>Sucursal A</td>
+          <td>{{ $proveedor->id }}</td>
+          <td>{{ $proveedor->nombrecomercial }}</td>
+          <td>{{ $proveedor->rfc }}</td>
+          <td>{{ $proveedor->pais }}</td>
           <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
           <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td>Proveedor 2</td>
-          <td>RFC-456</td>
-          <td>Sucursal B</td>
-          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
-          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Proveedor 3</td>
-          <td>RFC-789</td>
-          <td>Sucursal C</td>
-          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
-          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Proveedor 4</td>
-          <td>RFC-012</td>
-          <td>Sucursal D</td>
-          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
-          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Proveedor 5</td>
-          <td>RFC-345</td>
-          <td>Sucursal E</td>
-          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
-          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
-        </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
