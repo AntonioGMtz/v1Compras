@@ -121,7 +121,7 @@
                 <form action="{{ route('proovedores.destroy', $proveedor->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger" type="submit"><i class="fas fa-trash"></i></button>
+                    <button class="btn btn-danger" type="submit" onclick="return confirmarEliminacion()"><i class="fas fa-trash"></i></button>
                 </form>
             
           </td>
@@ -152,5 +152,16 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+  <script> console.log('Hi!'); 
+  
+  function confirmarEliminacion() {
+        return confirm("¿Estás seguro que deseas eliminar este registro?");
+
+        // Si se confirma la eliminación, el formulario se enviará y el registro se eliminará
+        // Si se cancela la eliminación, el formulario no se enviará y la acción se cancelará
+    }
+  
+  
+  </script>
+    
 @stop
