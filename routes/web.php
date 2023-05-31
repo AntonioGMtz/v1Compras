@@ -37,6 +37,7 @@ Route::post('/agregarproov',[AgproovedorController::class,'store'])->name('agreg
 
 //Route for PROOVEDORES
 Route::get('/proovedores', [ProovedorController::class, 'index'])->name('proovedores.index');
+Route::delete('/proovedores/{id}', [ProovedorController::class, 'destroy'])->name('proovedores.destroy');
 
 
 Route::get('/logout', [SesionController::class, 'destroy'])

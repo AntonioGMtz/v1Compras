@@ -115,9 +115,16 @@
           <td>{{ $proveedor->id }}</td>
           <td>{{ $proveedor->nombrecomercial }}</td>
           <td>{{ $proveedor->rfc }}</td>
-          <td>{{ $proveedor->pais }}</td>
+          <td>{{ $proveedor->sucursal }}</td>
           <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
-          <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+          <td>
+                <form action="{{ route('proovedores.destroy', $proveedor->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit"><i class="fas fa-trash"></i></button>
+                </form>
+            
+          </td>
         </tr>
         @endforeach
       </tbody>

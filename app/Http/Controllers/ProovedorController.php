@@ -17,6 +17,13 @@ class ProovedorController extends Controller
         $proveedores = Proveedores::all();
         return view('profile.proovedores')->with('proveedores', $proveedores);
     }
+    public function destroy($id)
+    {
+        $proveedores = Proveedores::findOrFail($id);
+        $proveedores->delete();
+
+        return redirect()->back()->with('success', 'Proveedor eliminado exitosamente');
+    }
 
 }
 
