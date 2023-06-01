@@ -6,6 +6,7 @@ use App\Http\Controllers\SesionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProovedorController;
 use App\Http\Controllers\AgproovedorController;
+use App\Http\Controllers\EditproovController;
 
 
 Route::get('/', function () {
@@ -38,6 +39,11 @@ Route::post('/agregarproov',[AgproovedorController::class,'store'])->name('agreg
 //Route for PROOVEDORES
 Route::get('/proovedores', [ProovedorController::class, 'index'])->name('proovedores.index');
 Route::delete('/proovedores/{id}', [ProovedorController::class, 'destroy'])->name('proovedores.destroy');
+
+//Route for EDIT PROOVEDORES
+Route::get('/editproov', [EditproovController::class, 'create'])->name('editproov.create');
+Route::get('/editproov/{id}/edit', [EditproovController::class, 'edit'])->name('editproov.edit');
+Route::put('/editproov/{id}', [EditproovController::class, 'update'])->name('editproov.update');
 
 
 Route::get('/logout', [SesionController::class, 'destroy'])

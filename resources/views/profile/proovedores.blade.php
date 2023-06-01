@@ -116,7 +116,10 @@
           <td>{{ $proveedor->nombrecomercial }}</td>
           <td>{{ $proveedor->rfc }}</td>
           <td>{{ $proveedor->sucursal }}</td>
-          <td><button class="btn btn-success"><i class="fas fa-edit"></i></button></td>
+          <td>
+            <button class="btn btn-success"><i class="fas fa-edit">
+            </i> <a href="{{ route('editproov.edit', $proveedor->id) }}">.</a></button>
+          </td>
           <td>
                 <form action="{{ route('proovedores.destroy', $proveedor->id) }}" method="POST">
                     @csrf
