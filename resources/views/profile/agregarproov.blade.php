@@ -71,7 +71,7 @@
   
 </style>
 <label for="numero">Número:</label>
-  <input type="number" id="numero" name="numero">
+  <input type="text" name="numero" value="{{ $numeroRegistro }}" readonly>
 
   <label for="categoria">Categoría:</label>
   <select id="categoria" name="categoria">
