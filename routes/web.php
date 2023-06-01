@@ -25,13 +25,13 @@ Route::post('/login', [SesionController::class, 'store'])
     ->name('login.store');
 
 //Route for dashboard
-Route::get('/dashboard', [DashboardController::class,'create'])->name('dashboard.index');
+Route::get('/dashboard', [DashboardController::class,'create'])->name('dashboard.index')->middleware('auth');
 
 //Route for dashboard
-Route::get('/proovedores', [ProovedorController::class,'create'])->name('proovedores.index');
+Route::get('/proovedores', [ProovedorController::class,'create'])->name('proovedores.index')->middleware('auth');;
 
 //Route for ADD proovedor
-Route::get('/agregarproov', [AgproovedorController::class,'create'])->name('agregarproov.index');
+Route::get('/agregarproov', [AgproovedorController::class,'create'])->name('agregarproov.index')->middleware('auth');;
 
 Route::post('/agregarproov',[AgproovedorController::class,'store'])->name('agregarproov.store');
 
@@ -41,7 +41,7 @@ Route::get('/proovedores', [ProovedorController::class, 'index'])->name('prooved
 Route::delete('/proovedores/{id}', [ProovedorController::class, 'destroy'])->name('proovedores.destroy');
 
 //Route for EDIT PROOVEDORES
-Route::get('/editproov', [EditproovController::class, 'create'])->name('editproov.create');
+Route::get('/editproov', [EditproovController::class, 'create'])->name('editproov.create')->middleware('auth');;
 Route::get('/editproov/{id}/edit', [EditproovController::class, 'edit'])->name('editproov.edit');
 Route::put('/editproov/{id}', [EditproovController::class, 'update'])->name('editproov.update');
 
